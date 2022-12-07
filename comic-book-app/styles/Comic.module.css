@@ -1,0 +1,7 @@
+.comicCards {
+	display: grid;
+	grid-template-columns: repeat(auto-fill 1fr);
+	background-color: dodgerblue;
+  	color: white;
+  	padding: 1rem;
+}

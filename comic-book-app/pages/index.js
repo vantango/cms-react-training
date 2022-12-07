@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { Comic } from '../components/Comic'
+import { comicsData } from "../pages/api/comicsData";
 import styles from '../styles/Home.module.css'
 
 function Home() {
@@ -10,7 +11,10 @@ function Home() {
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 			</Head>
 
-			<Comic styles={{styles}}/>
+			<main>
+				<Comic />
+			</main>
+			
 		</div>
 	)
 }

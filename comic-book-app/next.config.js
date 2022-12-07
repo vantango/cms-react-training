@@ -7,7 +7,6 @@ const nextConfig = {
       {
         protocol: 'http',
         hostname: 'i.annihil.us',
-        port: '3000',
         pathname: '/u/prod/marvel/i/mg/**',
       },
     ],
