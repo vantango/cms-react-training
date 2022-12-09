@@ -1,5 +1,6 @@
 import { Detail } from './Detail'
 import { comicsData } from "../pages/api/comicsData";
+import { Fragment } from 'react';
 import Image from 'next/image'
 import styles from "../styles/Comic.module.css";
 
@@ -10,26 +11,26 @@ export function Comic() {
 
 	const comicsMapped = comicsData.map((data) => {
 		return (
-			<div className={styles.comics}>
-				<Image
+			<div style={{paddingBottom: '40px'}}>
+				<Image className={styles.image}
 					loader={myLoader}
 					src={data.thumbnail}
-					alt="Picture of the comic"
+					alt="Picture of comic cover"
 					width={300}
-					height={500}
+					height={400}
 				/>
-				<Detail 
-					title={data.title} 
-					issue={data.issueNumber} 
-					date={data.publishDate} 
+				<Detail
+					title={data.title}
+					issue={data.issueNumber}
+					date={data.publishDate}
 					creators={data.creators[0].name}
 				/>
 			</div>
 		)
 	})
 	return (
-		<div>
+		<Fragment>
 			{comicsMapped}
-		</div>
+		</Fragment>
 	)
 }

@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import { Comic } from '../components/Comic'
-import styles from '../styles/Home.module.css'
 
 function Home() {
 	return (
@@ -9,7 +8,13 @@ function Home() {
 				<title>Comic Book Search</title>
 			</Head>
 
-			<main>
+			<main 
+				style={{
+					display: 'grid',
+					gridGap: '1rem',
+					gridTemplateColumns: 'repeat(auto-fill, 300px)',
+					backgroundColor: '#F8F8F2',
+					padding: '20px'}}>
 				<Comic />
 			</main>
 		</div>
