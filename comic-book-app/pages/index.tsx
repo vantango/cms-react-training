@@ -4,7 +4,6 @@ import { fetchAPI } from "../hooks/fetchAPI";
 
 function Home() {
 	const [comicsFetch] = fetchAPI();
-	console.log("fetch", comicsFetch);
 
 	return (
 		<div>
@@ -22,7 +21,8 @@ function Home() {
 				}}
 			>
 				{comicsFetch &&
-					comicsFetch.map((comic) => {
+					comicsFetch.map((comic): any => {
+						console.log("map", comic)
 						return <Comic key={comic.id} {...comic} />;
 					})}
 			</main>

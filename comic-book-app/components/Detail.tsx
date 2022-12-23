@@ -3,7 +3,7 @@ import styles from "../styles/Detail.module.css";
 
 export function Detail({ title, issueNumber, dates, creators }) {
 	let dateFormat = new Date(
-		dates.find((item) => (item.type = "focDate")).date
+		dates.find((item: any) => (item.type = "focDate")).date
 	).toLocaleDateString("en-us", {
 		year: "numeric",
 		month: "long",

@@ -12,26 +12,24 @@ const apiUrl = BASE_URL + "?ts=" + ts + "&apikey=" + API_PUBLIC_KEY + "&hash=" +
 
 export function fetchAPI() {
 	const [comicsData, setComicsData] = useState();
-	const [error,setError] = useState(null);
+	const [error, setError] = useState(null);
 	const [loading, setLoading] = useState(false);
 
-	const getComicsData = async () => {
-		try {
-			setLoading(true);
-			const res = await axios.get(apiUrl)
-			console.log("response", res.data.data.results);
-			setComicsData(res.data.data.results);
-			console.log("Success!")
-		} catch (err) {
-			setError(err)
-		} finally {
-			setLoading(false)
+	useEffect(() => {
+		const getComicsData = async () => {
+			try {
+				setLoading(true);
+				const res = await axios.get(apiUrl)
+				console.log("response", res.data.data.results);
+				setComicsData(res.data.data.results);
+				console.log("Success!")
+			} catch (err) {
+				setError(error);
+			} finally {
+				setLoading(false);
+			}
 		}
-	}
-
-	useEffect((data) => {
-		getComicsData(data)
-		console.log("data", data)
+		getComicsData()
 	}, [])
 
 	return (
