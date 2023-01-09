@@ -1,0 +1,20 @@
+.grid_container {
+	display: grid;
+	grid-template-columns: repeat(2fr, 1fr);
+	grid-template-rows: repeat(1fr, 1fr);
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+.comic_item {
+	grid-area: 2 / 1 / 6 / 5;
+	background-color: #222222;
+}
+.filter_item {
+	grid-area: 1 / 1 / 2 / 5;
+	background-color: #222222;
+}
+.favorites_item {
+	grid-area: 1 / 5 / 1 / 6;
+	background-color: #222222;
+}

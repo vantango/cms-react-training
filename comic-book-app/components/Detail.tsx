@@ -13,20 +13,20 @@ export function Detail({ title, issueNumber, dates, creators }) {
 	return (
 		<div className={styles.comics}>
 			<Button />
-			<section>
-				<h2 className={styles.detail_title}>{title}</h2>
+			<section data-testid="comic-detail" >
+				<h2 data-testid="comic-title" className={styles.detail_title}>{title}</h2>
 				<div>
 					<div className={styles.details_wrapper}>
 						<h3 className={styles.detail_labels}>Issue: </h3>
-						<p className={styles.detail_values}>{issueNumber}</p>
+						<p data-testid="comic-issue" className={styles.detail_values}>{issueNumber}</p>
 					</div>
 					<div className={styles.details_wrapper}>
 						<h3 className={styles.detail_labels}>Date Published:</h3>
-						<p className={styles.detail_values}>{dateFormat}</p>
+						<p data-testid="comic-date" className={styles.detail_values}>{dateFormat}</p>
 					</div>
 					<div className={styles.details_wrapper}>
 						<h3 className={styles.detail_labels}>Creators: </h3>
-						<p className={styles.detail_values}> {creators}</p>
+						<p data-testid="comic-creators" className={styles.detail_values}> {creators}</p>
 					</div>
 				</div>
 			</section>
