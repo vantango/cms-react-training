@@ -8,7 +8,7 @@ const ts = new Date().getTime();
 const auth = ts + API_PRIVATE_KEY + API_PUBLIC_KEY;
 const crypto = require('crypto');
 const hash = crypto.createHash("md5").update(auth).digest("hex");
-const apiUrl: string = BASE_URL + "?ts=" + ts + "&apikey=" + API_PUBLIC_KEY + "&hash=" + hash;
+const apiUrl: string = BASE_URL + "?orderBy=title&ts=" + ts + "&apikey=" + API_PUBLIC_KEY +  "&hash=" + hash;
 
 export function fetchAPI() {
 	const [comicsData, setComicsData] = useState();

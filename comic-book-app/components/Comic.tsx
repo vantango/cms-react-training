@@ -43,7 +43,7 @@ export function Comic(comic) {
 			<Image
 				className={styles.image}
 				loader={myLoader}
-				src={thumbnail.path + "." + thumbnail.extension}
+				src={thumbnail?.path + "." + thumbnail?.extension}
 				alt="Picture of comic cover"
 				width={300}
 				height={400}

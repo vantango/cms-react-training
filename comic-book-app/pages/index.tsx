@@ -18,7 +18,7 @@ function Home() {
 			<Header />
 			<div className={styles.grid_container}>
 				<div className={styles.filter_item}>
-					<Filter  />
+					{/* <Filter  /> */}
 				</div>
 				<main
 					className={styles.comic_item}

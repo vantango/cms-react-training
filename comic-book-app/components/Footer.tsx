@@ -1,10 +1,12 @@
 import React from 'react';
+import Image from "next/image";
 import styles from "../styles/Footer.module.css";
+import logo from "../public/logo.svg"
 
 export function Footer() {
 	return (
 		<footer className={styles.footer_container}>
-			<div className="logo"></div>
+			<Image src={logo} alt="comic logo" />
 			<div className="footer-links">
 				<a href="" className="privacy">Privacy Policy</a>
 				<a href="" className="terms">Terms of Service</a>
