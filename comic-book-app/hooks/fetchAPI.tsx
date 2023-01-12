@@ -1,4 +1,4 @@
-import { useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import axios from "axios";
 
 const BASE_URL = "http://gateway.marvel.com/v1/public/comics";

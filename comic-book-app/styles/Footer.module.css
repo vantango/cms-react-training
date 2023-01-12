@@ -1,3 +1,26 @@
 .footer_container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font: normal normal normal 14px/16px Montserrat;
 	background-color: #222222;
+}
+
+.footer_policy_text {
+	text-decoration: underline;
+	padding: 0 5px;
+}
+
+.footer_policy_container {
+	display: flex;
+	align-items: center;
+}
+
+.footer_copyright {
+	margin-bottom: 50px;
+}
+
+.footer_logo {
+	margin: 30px 0;
 }

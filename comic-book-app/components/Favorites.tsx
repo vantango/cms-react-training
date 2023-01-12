@@ -2,7 +2,7 @@ import React from 'react';
 
 export function Favorites() {
 	return (
-		<div className="favorites-container">
+		<div>
 			<h2 className="favorites">Favorites</h2>
 			<ul>
 				<li>Comic 1</li>

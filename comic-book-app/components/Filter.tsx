@@ -1,5 +1,10 @@
-import { useState} from 'react';
+import { useEffect, useState} from 'react';
 import { fetchAPI } from "../hooks/fetchAPI";
+
+// type FilterProps = {
+// 	filter?: string | number;
+// 	setFilter: string;
+// }
 
 const characterOptions = [
 	{
@@ -59,11 +64,6 @@ const creatorOptions = [
 	}
 ]
 
-type FilterProps = {
-	filter?: string | number;
-	setFilter: string;
-}
-
 export function Filter() {
 	// const [characterOptions, setCharacterOptions] = useState();
 	// const [creatorOptions, setCreatorOptions] = useState();
@@ -74,19 +74,27 @@ export function Filter() {
 	// 	document.get
 	// }
 
-	// return (
-	// 	<div className="filter">
-	// 		<label htmlFor="filter">Filter by: </label>
-	// 		<select  className="character-filter" >
-	// 			<option disabled selected hidden>Character</option>
-	// 			{characterOptions.map((item) => {
-	// 				return <option value={item.id}>{item}</option>
-	// 			})}
-	// 		</select>
-	// 		<select className="creator-filter">
-	// 			<option disabled selected hidden>Creator</option>
-	// 			<option value="12787">Kate Leth</option>
-	// 		</select>
-	// 	</div>
-	// )
+	// if()
+
+	// useEffect(() => {
+	// 	fetchAPI()
+	// }, [])
+
+	return (
+		<div className="filter">
+			<label htmlFor="filter">Filter by: </label>
+			<select  className="character-filter" aria-label="Filter By Character">
+				<option disabled selected hidden>Character</option>
+				{characterOptions.map((character) => {
+					return <option value={character.id}>{character.name}</option>
+				})}
+			</select>
+			<select className="creator-filter" aria-label="Filter By Creator">
+				<option disabled selected hidden>Creator</option>
+				{creatorOptions.map((creator) => {
+					return <option value={creator.id}>{creator.name}</option>
+				})}
+			</select>
+		</div>
+	)
 }

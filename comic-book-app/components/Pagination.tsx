@@ -2,6 +2,6 @@ import React from 'react';
 
 export function Pagination() {
 	return (
-		<div className="pagination"></div>
+		<div className="pagination">Pagination</div>
 	)
 }

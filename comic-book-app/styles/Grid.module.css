@@ -1,9 +1,11 @@
 .grid_container {
+	position: relative;
 	display: grid;
 	grid-template-columns: repeat(2fr, 1fr);
 	grid-template-rows: repeat(1fr, 1fr);
 	grid-column-gap: 20px;
 	grid-row-gap: 20px;
+	z-index: 10;
 }
 
 .comic_item {
