@@ -6,6 +6,7 @@
 	grid-column-gap: 20px;
 	grid-row-gap: 20px;
 	z-index: 10;
+	margin-top: 40em;
 }
 
 .comic_item {

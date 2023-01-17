@@ -4,8 +4,19 @@
 	position: relative;
 	z-index: 10;
 	background-color: transparent;
+	margin: 0 4em;
+	background: transparent linear-gradient(180deg, #000000B3 0%, #00000000 100%) 0% 0% no-repeat padding-box;
 }
 
 .header_list {
-	
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	list-style: none;
+	font: normal normal bold 18px/16px Montserrat;
+	letter-spacing: 0px;
+}
+
+.header_list_item {
+	margin-left: 15px;
 }
